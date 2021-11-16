@@ -27,6 +27,11 @@ table {
   border: solid 0.5px;
 }
 
+th {
+  text-align: center;
+  font-weight: 450;
+}
+
 body {
   background-color: #C9A9C2;
   color: #231942;
@@ -102,6 +107,7 @@ li :hover {
   background-color: #FAE8EB;
 }
 
+
 .invisible {
   display: none;
 }
@@ -129,6 +135,10 @@ li :hover {
   color: black;
 }
 
+#about-me-img{
+  margin-top: 30px;
+}
+
 #top-container h2 {
   font-size: 20px;
   color: black;
@@ -140,11 +150,12 @@ li :hover {
   margin-left: auto;
 }
 
-#tree-img {
+#me-img {
   margin-top : 50px; 
   margin-left: 50px;
   width: 350px;
-  float: left;  
+  float: left; 
+  border-radius: 75px;
 }
 
 #technical-skills {
