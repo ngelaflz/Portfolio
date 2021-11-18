@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<!--
+  Ngela Simamba
+  6247878
+  COSC 2P89
+ -->
+
+<html>
+
+<head>
+	<title> Registration </title>
+	<style>
+		body {
+			font-family: "Optima", "Segoe", "Segoe UI", "Candara", "Calibri", "Arial", "sans-serif";
+		}
+
+		h1, h2 {
+			font-family: Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
+		}
+
+    h1 {
+      margin: 5px;
+      //font-size: 30px;
+    }
+
+    h2 {
+      margin-top: 20px;
+    }
+
+    select {
+      padding: 5px;
+      border-radius: 50px;
+      text-align: center;
+      border: 2px solid purple;
+    }
+
+		.error {
+			color: red;
+			display: block;
+			margin: 3px;
+		}
+
+		#book-confirmation {
+			color: green;
+		}
+
+		.invisible {
+			display: none;
+		}
+
+		.container {
+			background: #e1bbe8;
+			width: 350px;
+			padding: 60px 40px 40px 40px;
+			border-radius: 100px;
+			margin-left: auto;
+			margin-right: auto;
+      border-style: dashed;
+      border-color: #9349a0;
+		}
+
+		.textField {
+			padding: 5px;
+			border-radius: 50px;
+			border: 2px solid purple;
+			width: 200px;
+      text-align: center;
+		}
+
+		.fieldLabel {
+			display: block;
+			margin: 5px;
+		}
+
+    .register {
+      padding: 10px 60px;
+      border: 1px solid #aa821d;
+      border-radius: 50px;
+      margin-top: 40px;
+      background-color: #FFC93C;
+    }
+
+    .register:hover {
+      background-color: purple;
+      border-color: black;
+    }
+
+    .radios {
+      margin: 10px;
+    }
+
+    .flower-icon{
+      display: block;
+      width: 20px;
+      margin: 20px;
+    }
+
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<center>
+			<h1> Registration Form </h1>
+			<p> Please fill in all fields and click Register. </p>
+
+      <img src="https://cdn-icons-png.flaticon.com/512/678/678100.png" class="flower-icon">
+
+			<h2> User Information </h2>
+
+			<label for="firstName" class="fieldLabel"> First Name </label>
+    <p id="fn-error" class="invisible error"> First name is required </p>
+    <input type="text" id="firstName" onblur="checkFirstName()" class="textField">
+
+    <br>
+    <label for="lastName" class="fieldLabel"> Last Name </label>
+    <p id="ln-error" class="invisible error"> Last name is required </p>
+    <input type="text" id="lastName" onblur="checkLastName()" class="textField">
+
+    <br>
+    <label for="email" class="fieldLabel"> Email </label>
+    <p id="em-error" class="invisible error"> Valid email is required </p>
+    <input type="email" id="email" onblur="checkEmail()" class="textField">
+
+    <br>
+    <label for="phone" class="fieldLabel"> Phone Number</label>
+    <p id="ph-error" class="invisible error"> Valid phone number is required </p>
+    <input type="tel" id="phone" onblur="checkPhone()" class="textField">
+
+<img src="https://cdn-icons-png.flaticon.com/512/678/678100.png" class="flower-icon">
+    <h2> Publications </h2>
+    <p> Which book would you like information about? </p>
+
+    <p id="bk-error" class="invisible error"> Please make a selection </p>
+
+    <select id="books" onchange="displayConfirmation()">
+      <option value="0"> --- Pick a Book --- </option>
+      <option value="1"> Internet and WWW How to Program </option>
+      <option value="2"> The Age of AI and our Human Future </option>
+      <option value="3"> Cracking the Coding Interview </option>
+      <option value="4"> System Design Interview </option>
+    </select>
+
+
+    <p id="book-confirmation"><p>
+
+
+    <img src="https://cdn-icons-png.flaticon.com/512/678/678100.png" class="flower-icon">
+
+    <h2> Operating Systems </h2>
+    <p> Which operating system do you use? </p>
+    <div class="radios">
+      <input type="radio" id="windows" name="operating_system" checked>
+      <label for="html">Windows</label>
+      <input type="radio" id="mac" name="operating_system">
+      <label for="css">Mac OS X</label>
+      <input type="radio" id="linux" name="operating_system">
+      <label for="javascript">Linux</label>
+      <input type="radio" id="other" name="operating_system">
+      <label for="javascript">Other</label><br>
+    </div>
+    <input type="submit" value="Register" onclick="checkInput()" class="register">
+    </center>
+    </div>
+
+    </body>
+
+    <script>
+      const books = document.getElementById("books");
+      const booksLength = books.options.length;
+      var selectedBook = 0;
+      var firstName, lastName, email, phone;
+      var validFirstName, validLastName, validEmail, validPhone, validBook;
+
+      //displays the confirmation of the selected bok
+      function displayConfirmation(){
+        selectedBook = books.options[books.selectedIndex].text;
+
+        //if user hasnt selected a book, dont display confirmation
+        if ( selectedBook == "--- Pick a Book ---"){
+          document.getElementById("book-confirmation").innerHTML = "";
+          //document.getElementById("bk-error").classList.add("invisible");
+          validBook = false;
+        }
+        else {
+          document.getElementById("book-confirmation").innerHTML = selectedBook;
+          document.getElementById("bk-error").classList.add("invisible");
+          validBook = true;
+        }
+      }
+
+      function checkFirstName(){
+        firstName = document.getElementById("firstName").value;
+        if ( firstName == "" ) {
+          document.getElementById("fn-error").classList.remove("invisible");
+          validFirstName = false;
+        }
+        else {
+          document.getElementById("fn-error").classList.add("invisible");
+          validFirstName = true;
+        }
+      }
+
+      function checkLastName(){
+        lastName = document.getElementById("lastName").value;
+        if ( lastName == "" ) {
+          document.getElementById("ln-error").classList.remove("invisible");
+          validLastName = false;
+        }
+        else {
+          document.getElementById("ln-error").classList.add("invisible");
+          validLastName = true;
+        }
+      }
+
+      function checkEmail(){
+        email = document.getElementById("email").value;
+        if ( !email.includes("@")  || email=="" ) {
+          document.getElementById("em-error").classList.remove("invisible");
+          validEmail = false;
+        }
+        else {
+          document.getElementById("em-error").classList.add("invisible");
+          validEmail = true;
+        }
+      }
+
+      function checkPhone(){
+        phone = document.getElementById("phone").value;
+        const regEx = /[a-zA-Z]/g;
+        if ( phone == "" || regEx.test(phone) ) {
+          document.getElementById("ph-error").classList.remove("invisible");
+          validPhone = false;
+        }
+        else {
+          document.getElementById("ph-error").classList.add("invisible");
+          validPhone = true;
+        }
+      }
+
+      function checkBook(){
+        selectedBook = books.options[books.selectedIndex].text;
+        if ( selectedBook == "--- Pick a Book ---"){
+          document.getElementById("bk-error").classList.remove("invisible");
+          validBook = false;
+        }
+        else {
+          document.getElementById("bk-error").classList.add("invisible");
+          validBook = true;
+        }
+      }
+
+      function checkInput(){
+        //we still have to run these in this function in case the user hits Register w/o ineracting with anything
+        checkFirstName();
+        checkLastName();
+        checkEmail();
+        checkPhone();
+        checkBook();
+
+        if ( validFirstName & validLastName & validEmail & validPhone ) {
+
+        }
+        else {
+          alert("Please correct the errors on the page and submit again");
+        }
+      }
+
+    </script>
+  </body>
+</html>
