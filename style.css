@@ -33,7 +33,7 @@ th {
 }
 
 body {
-  background-color: #C9A9C2;
+  background-color: #FAE8EB;
   color: #231942;
   margin: 0;
   padding: 0;
@@ -71,7 +71,7 @@ td {
 
 nav {
   height: 50px;
-  background-color: #828A95;
+  background-color: #afafaf;
   padding: 7px 200px 10px 7px;
   text-align: right;
   position: fixed;
@@ -121,7 +121,7 @@ li :hover {
 }
 
 .pink-container{
-  background-color: #FAE8EB;
+  background-color: #e8dce5;
   border-radius: 75px;
   padding: 0 40px 40px 40px;
   width: 45%;
@@ -190,7 +190,7 @@ li :hover {
 }
 
 #contact-me {
-  background-color: #FAE8EB;
+
   margin: 50px auto 50px auto;
   font-size: 16px;
   text-align: center;
