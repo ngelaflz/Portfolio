@@ -1,0 +1,225 @@
+/* <!-- Ngela Simamba : ns17uq : 6247878 --> */
+body {
+  font-family: "Manjari", sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+h3 {
+  font-family: 'Rock Salt', cursive;
+  padding-top: 200px;
+  font-size: 35px;
+}
+
+#id h1 {
+  size: 10px;
+  margin: 0px;
+}
+
+h2 {
+  line-height: 0;
+  padding: 0;
+  size: 20px;
+}
+
+a {
+  padding: 10px;
+  border-radius: 100px;
+}
+
+nav a:link {
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: black;
+  background-color: #694e7a;
+}
+
+nav a:visited {
+  text-decoration: none;
+}
+
+nav a:active {
+  text-decoration: none;
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:active {
+  text-decoration: none;
+  color: white;
+}
+
+img:hover {
+  opacity: 0.80;
+}
+
+ul, li {
+  list-style: none;
+  display: inline-block;
+}
+
+table {
+  text-align: center;
+  border: 1;
+  border-color: green;
+  color: green;
+}
+
+nav li {
+  padding: 5px 10px;
+  margin: 0 100px;
+}
+
+.covid {
+  background-color: grey;
+  color: white;
+  padding: 5px;
+  font-size: 14px;
+}
+
+nav {
+  background-color: #694e7a;
+  size: 20px;
+  colour: black;
+  text-align: center;
+}
+
+footer {
+  colour: grey;
+}
+
+#main {
+  background-image: url("images/stainless-878333_1920.jpg");
+  width: 100%;
+  height: 550px;
+}
+
+.main-img {
+  width: 10%;
+}
+
+#products {
+  margin: 35px 50px;
+}
+
+#products h1 {
+  font-size: 25px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.product {
+  width: 30%;
+  display: inline-block;
+  margin: 10px;
+}
+
+#main-product {
+  padding: 50px;
+}
+
+.product-pg-img {
+  width: 30%;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.product-ow-img {
+  border-radius: 50px;
+  margin-bottom: 10px;
+}
+
+#faq {
+  margin-top: 50px;
+}
+
+#faq p {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+@media print {
+  p.bodyText {
+    font-family: georgia, times, serif;
+  }
+}
+
+.product-text h2 {
+  margin-top: 75px;
+}
+
+#product button {
+  display: inline-block;
+}
+
+.ow-add-cart{
+  padding: 10px 25px;
+  background-color: #aa98b5;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  /* display: inline-block; */
+}
+
+.ow-add-cart:hover{
+  color: #694e7a;
+}
+
+.ow-remove-cart{
+  padding: 10px 10px;
+  background-color: #694e7a;
+  border-radius: 8px;
+  color: white;
+  border: none;
+}
+
+.ow-remove-cart:hover{
+  color: #2d1c38;
+}
+
+.pg-add-cart{
+  padding: 10px 50px;
+  background-color: #aa98b5;
+  border-radius: 8px;
+  color: white;
+  border: none;
+}
+
+.pg-add-cart:hover{
+  color: #694e7a;
+}
+
+.wishlist-items li{
+  display: block;
+  font-size: 25px;
+  padding: 10px;
+}
+
+#wishlist-body{
+  margin: 60px;
+}
+
+#wishlist-body h2{
+  font-size: 45px;
+}
+
+.product-text h2{
+  margin: 23px;
+}

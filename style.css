@@ -54,8 +54,7 @@ h2 {
 h3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  margin-bottom: 0;
-
+  margin: 5px 0 5px 0; 
 }
 
 p {
@@ -72,11 +71,19 @@ td {
 nav {
   height: 50px;
   background-color: #afafaf;
-  padding: 7px 200px 10px 7px;
+  padding: 7px 300px 10px 7px;
   text-align: right;
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+nav a:hover {
+  color: #FAE8EB;
+}
+
+nav ul {
+  margin-right: 5%;
 }
 
 hr {
@@ -103,10 +110,32 @@ li a {
   padding: 10px 15px 10px 15px;
 }
 
-li :hover {
-  background-color: #FAE8EB;
+footer {
+  border-top: solid 0.5px #828A95;
+  text-align: center;
 }
 
+footer img {
+  width: 40px;
+  margin-top: 10px;
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer li {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+footer a, footer a:visited {
+  color: #231942;
+}
+footer a:hover {
+  color: #000000;
+}
 
 .invisible {
   display: none;
