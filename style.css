@@ -92,7 +92,7 @@ hr {
 }
 
 ul {
-  list-style: none;
+  /*list-style: none;*/
   font-family: 'Roboto Slab', serif;
 }
 
@@ -142,11 +142,43 @@ footer a:hover {
 }
 
 .flower-img{
-  width: 32px;
+  width: 12px;
+  margin-right: 5px;
 }
 
 .portfolio-piece{
   text-align: left;
+}
+
+.skills-list li{
+  display: inline-block;
+}
+
+.skills-list li{
+  display: inline;
+}
+
+#skills li {
+  display: inline-block;
+  margin: 0;
+}
+
+.experience-container{
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  padding: 0 40px 40px 40px;
+  width: 75%;
+}
+
+#skills {
+  margin: 50px auto 50px auto;
+  font-size: 18px;
+  width: 75%;
+}
+
+#skills h4 {
+  text-align: center;
+  margin: 0;
 }
 
 .pink-container{
@@ -190,6 +222,9 @@ footer a:hover {
 #technical-skills {
   margin: 125px auto 50px auto;
   font-size: 20px;
+}
+
+.experience-container{
   font-family: 'Roboto Slab', serif;
   text-align: center;
   padding: 0 40px 40px 40px;
@@ -198,6 +233,77 @@ footer a:hover {
 #technical-skills h2 {
   padding-top: 0;
   font-size: 30px;
+}
+
+#work-exp {
+  margin: 125px auto 50px auto;
+  font-size: 14px;
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  padding: 0 40px 40px 40px;
+  width: 75%;
+}
+
+.work-exp-item{
+  margin-top: 60px;
+}
+
+.work-exp-item h4 {
+  margin-top: 0;
+}
+
+#work-exp td {
+  border: none;
+}
+
+#work-exp-extra {
+  margin-top: 60px;
+}
+
+#work-exp-extra th {
+  padding: 10px 0;
+}
+
+#work-exp-extra th{
+  width: 33.33%;
+}
+
+.experience-heading{
+  font-size: 20px;
+}
+
+.work-exp-heading {
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+#work-exp ul {
+  text-align: left;
+  margin-top: 0;
+}
+
+#work-exp li {
+  padding: 2px 0;
+  display: block;
+  margin: 0;
+}
+
+#work-exp table{
+  width: 100%;
+  border: none;
+}
+
+#work-exp th:first-of-type{
+  text-align: left;
+}
+
+#work-exp th{
+  text-align: center;
+}
+
+#work-exp th:last-of-type{
+  text-align: right;
 }
 
 #about-me {
@@ -231,6 +337,7 @@ footer a:hover {
 #computer-img {
   margin-top: 50px;
   margin-bottom: 20px;
+  width: 50px;
 }
 
 #icon-credit{
