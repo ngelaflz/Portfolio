@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+ 
+<html>
+  <head>
+    <title>Blog</title>
+    <style>
+
+ul {
+  list-style-type: none;
+}
+html, body, div, h1, h2, h3, h4, p, ul, ol {
+   margin:0;
+}
+
+h4 {
+  font-size: 15px;
+  margin: 10px 0;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.bg-colour1 {
+  background-color: #0a4543;
+}
+
+/* Header Styling */
+header{
+  margin: 0;
+  padding: 5px 75px 5px 50px;
+  color: white;
+  font-size: 13px;
+}
+
+.head-div{
+  background-color: #01855e;
+  color: white;
+  padding: 25px 50px;
+  font-size: 20px;
+}
+
+/* make h1s and ps inside head-div inline */
+.head-div h1, .head-div p {
+  display: inline;
+}
+
+.welcome-g{
+  margin-right: 190px;
+}
+
+header p {
+  display: inline;
+}
+
+/* header a:link, header a:visited, header a:active, header a:hover  {
+  
+} */
+
+.head-link {
+  color: #87b09a;
+}
+
+/* Navbar Styling */
+
+nav {
+  background-color: #85b890;
+  padding: 10px 35px;
+}
+
+nav li {
+  margin: 15px;
+  display: inline;
+}
+
+nav a:link, nav a:visited, a:active  {
+  color: black;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: white;
+}
+
+/* Page Body Styling */
+
+.page-body{
+  padding: 0px 0px 30px 50px;
+  vertical-align: top;
+  width: 75%;
+}
+
+.article-body li, td {
+  font-size: 11px;
+}
+
+.article-body h2 {
+  font-size: 19px;
+}
+
+.article-body p {
+  padding-top: 6px;
+  font-size: 11px;
+}
+
+.article-body{
+  padding-top: 30px;
+  padding-right: 0px;
+  display: inline-block;
+  width: 430px;
+  vertical-align: top;
+}
+
+.art-link {
+  color: #5d7453;
+  text-decoration: none;
+}
+
+/* For the verticle line indent in articles */
+
+table {
+  border-collapse: collapse;
+  margin: 10px 30px;
+}
+
+tr {
+  border-left: 2px solid #6d8159;
+}
+
+td {
+  padding: 2px 3px 5px 3px;
+}
+
+.t2 {
+  margin-left: 40px;
+}
+
+/* Table of Contents Styling */
+
+.table-of-contents {
+  background-color: #d7ddd3;
+  display: inline-block;
+  font-size: 11px;
+  padding: 30px 40px 10px 10px;
+}
+
+.table-of-contents p {
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.table-of-contents li {
+  padding: 1px;
+}
+
+.table-of-contents ul {
+  padding: 10px 10px 10px 30px;
+}
+
+.table-cont-link {
+  color: black;
+  text-decoration: none;
+}
+
+/* Special kinds of lists in articles */
+
+.a2-list {
+  list-style-type: disc;
+  font-size: 11px;
+  margin: 10px 0;
+}
+
+.a3-list1 {
+  list-style-type: disc;
+  margin-left: 8px;
+}
+
+/* Footer Styling */
+
+footer {
+  padding: 15px 65px 15px 30px;
+}
+ .footer-container {
+   display: inline-block;
+   padding: 20px;
+   vertical-align: top;
+   font-size: 11px;
+   color: #82a789;
+ }
+
+ .footer-container ul {
+   padding: 0;
+ }
+
+footer a:link, footer a:visited, footer a:active, footer a:hover  {
+  color: white;
+  text-decoration: none;
+}
+
+footer p {
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+ #copyright {
+   float: right;
+   text-align: right;
+ }
+
+  @media screen and (max-width: 885px) {
+        .article-body {
+          width: 60%;
+        }
+
+        .page-body {
+          width: 100%;
+          padding: 0 5%;
+          margin-right: 5%;
+        }
+
+        .head-div{
+          display: grid;
+          place-items: center;
+        }
+
+        .welcome-g {
+          margin-right: 0px;
+          grid-column: 1 / span 4;
+        }
+
+        .stay-updated {
+          grid-column: 7 / span 5;
+          text-aligm: right;
+        }
+
+        header {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          padding: 5px 5% 5px 5%;
+        }
+
+        nav {
+          text-align: center;
+        }
+
+        .table-of-contents{
+          padding: 30px 10px 10px 10px;
+        }
+        
+      }
+
+      @media screen and (max-width: 680px) {
+
+        nav {
+          padding: 10px 0;
+        }
+
+        nav li {
+          margin: 15px;
+          display: inline;
+        }
+
+        .article-body {
+          width: 50%;
+        }
+
+        .page-body{
+          width: 100%;
+        }
+
+        .table-of-contents{
+          float: right;
+          margin-right: 10%;
+        }
+
+        footer{
+          padding: 0px;
+        }
+
+
+      }
+
+  </style>
+  </head>
+  <header class="bg-colour1">
+    <p class="welcome-g">Welcome, Guest <a href="https://www.google.com/" class="head-link"> Log in</a> <a href="https://www.google.com/" class="head-link"> Sign up</a></p>
+    <p class="stay-updated"> Stay updated <a href="https://www.google.com/" class="head-link"> Subscribe via RSS Email Updates </a></p>
+  </header>
+  <body>
+    <div class="head-div">
+      <h1> My Blog </h1>
+      <p> Description of My Blog </p>
+    </div>
+
+    <nav>
+      <li> <a> HOME </a></li>
+      <li> <a> ABOUT </a></li>
+      <li> <a> BLOG </a></li>
+      <li> <a> CONTACT</a></li>
+      <li> <a onClick = "changeColour()"> COLOUR</a></li>
+    </nav>
+
+    <div class="page-body">
+      <div class="article-body">
+        <h2> Don't Cancel Chuck! </h2>
+        <p> on July 1st in <a href="https://www.google.com/" class="art-link"> General </a> tagged <a href="https://www.google.com/" class="art-link"> petitions </a> by <a href="https://www.google.com/" class="art-link"> admin </a> </p> 
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc interdum, diam ut sollicitudin hendrerit, nisi nisl scelerisque est, ut fringilla odio eros at erat. Aliquam fringilla accumsan sollicitudin. Nunc sit amet est nisi. Sed volutpat tincidunt arcu, in tempus neque dignissim et. Proin porttitor venenatis ipsum luctus maximus. Nunc eget varius urna. Nunc condimentum, justo vel ullamcorper faucibus, turpis erat hendrerit eros, quis pellentesque nisi justo quis magna. Nunc at ex sagittis, elementum dolor ut, auctor ex.  </p>
+        <table>
+          <tr>
+            <td>
+              <p> Nam ac massa non velit dapibus blandit. Fusce luctus nulla neque, id interdum magna efficitur eget. Vivamus malesuada luctus ornare. Integer quis leo sed ipsum consequat tristique. Sed varius tortor eget scelerisque euismod. </p>
+            </td>
+          </tr>
+        </table>
+        <p> Fusce laoreet ante in libero porttitor tempus. Nam urna elit, facilisis maximus volutpat vel, tempor ac urna. Etiam consectetur mollis ipsum sed fermentum. Proin dapibus vitae augue ac tincidunt. Sed cursus leo metus, eu lacinia sapien varius ut. Pellentesque ante justo, vestibulum nec nisl vel, mattis molestie sapien. Donec convallis hendrerit ex, in malesuada est ornare at. Maecenas nec lorem lorem. Phasellus tristique nisi eget ex condimentum fermentum. <a class="art-link" href="https://www.google.com/"> Read More </a>  
+        </p>
+        <br>
+        <h2> Alien Space Craft Found in New Mexico </h2>
+        <p> on July 1st in <a class="art-link" href="https://www.google.com/"> General </a> tagged <a class="art-link" href="https://www.google.com/"> petitions </a> by <a class="art-link" href="https://www.google.com/"> admin </a> </p> 
+        <p> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas rutrum nibh vel volutpat mattis. Phasellus elementum sem nec imperdiet convallis. Quisque commodo nunc eget maximus feugiat. Quisque ex velit, mollis id mi at, interdum bibendum metus.  </p>
+        <ul class="a2-list">
+          <li>Quisque commodo nunc eget maximus feugiat. </li>
+          <li> Donec velit neque, maximus ut dui dapibus </li>
+          <li> Phasellus tristique nisi eget ex condimentum fermentum. </li>
+        </ul> 
+        <p>
+          Duis ultricies varius metus a porttitor. Sed dui sapien, maximus sed massa quis, dapibus porta velit. Cras tincidunt arcu gravida mi vulputate tempus. In placerat rhoncus arcu, quis vulputate tellus varius at. Vestibulum laoreet eros ipsum, vitae posuere risus tempus ac.
+        </p>
+      <br>
+      <h2> Ghostly Goo in your Kitchen Sink? </h2>
+        <p> on July 1st in <a href="https://www.google.com/" class="art-link"> General </a> tagged <a href="https://www.google.com/" class="art-link"> petitions </a> by <a href="https://www.google.com/" class="art-link"> admin </a> </p> 
+        <p> <b> Etiam consectetur mollis ipsum sed fermentum.</b> Proin dapibus vitae augue ac tincidunt. Sed cursus leo metus, eu lacinia sapien varius ut. Pellentesque ante justo, vestibulum nec nisl vel, mattis molestie sapien. Donec convallis hendrerit ex, in malesuada est ornare at. Maecenas nec lorem lorem. Phasellus tristique nisi eget ex condimentum fermentum. Pellentesque ante justo, vestibulum nec nisl vel, mattis molestie sapien. In placerat rhoncus arcu, <a class="art-link" href="https://www.google.com/"> vulputate tellus varius. </a> Vestibulum laoreet eros ipsum, vitae posuere risus tempus ac. </p>
+        
+        <h4> Header Level 4 </h4>
+
+        <ol>
+          <li> Pellentesque ante justo, vestibulum nec nisl vel, mattis molestie sapien. </li>
+          <li> Phasellus tristique nisi eget ex condimentum fermentum. </li>
+        </ol>
+
+        <table class="t2">
+          <tr>
+            <td >
+              Aliquam fringilla accumsan sollicitudin. Nunc sit amet est nisi. Sed volutpat tincidunt arcu, in tempus neque dignissim et. Proin porttitor venenatis ipsum luctus maximus. Nunc eget varius urna.
+            </td>
+          </tr>
+        </table>
+
+        <h3> Header Level 3</h3>
+
+
+        <ul class="a3-list1">
+          <li> Sed varius tortor eget scelerisque euismod. </li>
+          <li> Sed volutpat tincidunt arcu, in tempus neque dignissim et.</li>
+        </ul>
+        
+        <ol>
+          <li> Nunc eget varius urna. </li>
+          <li> Etiam consectetur mollis ipsum sed fermentum.</li>
+        </ol>
+
+        
+      </div>
+      
+      <div class="table-of-contents">
+        <p>Categories <p>
+          <ul>
+            <li> <a href="https://www.google.com/" class="table-cont-link"> General </a> </li>
+            <li> <a href="https://www.google.com/" class="table-cont-link">Ghost Sightings </a> </li>
+            <li> <a href="https://www.google.com/" class="table-cont-link">UFO Crashes </a> </li>
+            <li> <a href="https://www.google.com/" class="table-cont-link">Governemnt Coverups </a> </li>
+            <li> <a href="https://www.google.com/" class="table-cont-link">International Conspiracies </a> </li>
+          </ul>
+          <p> Recent Posts <p>
+          <ul>
+            <li> <a href="https://www.google.com/" class="table-cont-link">Ghost Sightning in Mansion  </a> </li>
+            <li> <a href="https://www.google.com/" class="table-cont-link">UFO picked up by Satelites </a></li>
+            <li> <a href="https://www.google.com/" class="table-cont-link">Mutants amoung us? </a> </li>
+            <li> <a href="https://www.google.com/" class="table-cont-link">Bigfoot: Fact or Fiction? </a> </li>
+          </ul>
+          <p> Archives <p>
+          <ul>
+            <li> <a href="https://www.google.com/" class="table-cont-link">June 2008 </a> </li>
+            <li> <a href="https://www.google.com/" class="table-cont-link">May 2008 </a> </li>
+            <li> <a href="https://www.google.com/" class="table-cont-link">April 2008 </a> </li>
+            <li> <a href="https://www.google.com/" class="table-cont-link">March 2008 </a> </li>
+          </ul>
+      </div>
+    </div>
+
+    <footer class="bg-colour1">
+      <div class="footer-container">
+        <p> Links </p>
+        <ul>
+          <li> <a href="https://www.google.com/"> PSDtuts - Photoshop Tutorials </a></li>
+          <li> <a href="https://www.google.com/"> Nettuts - Web development and design tutorials </a></li>
+          <li> <a href="https://www.google.com/"> Vectortuts - Illustrator and vector tutorials </a></li>
+          <li> <a href="https://www.google.com/"> Flashtuts - Adobe Flash tutorials </a></li>
+        </ul>
+      </div>
+      <div class="footer-container">
+        <p> Follow our updates </p>
+        <ul>
+          <li> <a href="https://www.google.com/"> Subscribe to ISS Feed </a></li>
+          <li> <a href="https://www.google.com/"> What is RSS? </a></li>
+          <li> <a href="https://www.google.com/"> Email updates </a></li>
+        </ul>
+      </div>
+      <div class="footer-container" id="copyright">
+        Copyright 2009
+        <br>
+        All Rights Reserved
+      </div>
+    </footer>
+    
+    <script>
+      //keeps track of current theme colour
+var colour = "green";
+
+function changeColour() {
+
+  if ( colour == "green" ) {
+
+    //change dark green background colour
+    var elements = document.getElementsByClassName("bg-colour1");
+    var i;
+    for ( i = 0; i < elements.length; i++ ) {
+        elements[i].style.backgroundColor = "#252742";
+    }
+
+    //change medium green background colour
+    elements = document.getElementsByClassName("head-div");
+    elements[0].style.backgroundColor = "#44498e";
+  
+    //change light green background colour
+    elements = document.getElementsByTagName("nav");
+    elements[0].style.backgroundColor = "#757bbd";
+
+    //change header links' text colour
+    elements = document.getElementsByClassName("head-link");
+    for ( i = 0; i < elements.length; i++ ) {
+        elements[i].style.color = "blue";
+    }
+
+    //change article links' colour
+    elements = document.getElementsByClassName("art-link");
+    for ( i = 0; i < elements.length; i++ ) {
+        elements[i].style.color = "blue";
+    }
+
+    //change footer text colour
+    elements = document.getElementsByClassName("footer-container");
+    for ( i = 0; i < elements.length; i++ ) {
+        elements[i].style.color = "blue";
+    }
+
+    //change border colour
+    elements = document.getElementsByTagName("tr");
+    for ( i = 0; i < elements.length; i++ ) {
+      elements[i].style.borderColor = "blue";
+    }
+
+    // update colour state
+    colour = "blue";
+  }
+  //change to green
+  else {
+
+    //change dark blue background colour
+    var elements = document.getElementsByClassName("bg-colour1");
+    var i;
+    for ( i = 0; i < elements.length; i++ ) {
+        elements[i].style.backgroundColor = "#0a4543";
+    }
+
+    //change medium blue background colour
+    elements = document.getElementsByClassName("head-div");
+    elements[0].style.backgroundColor = "#01855e";
+  
+    //change light blue background colour
+    elements = document.getElementsByTagName("nav");
+    elements[0].style.backgroundColor = "#85b890";
+
+    //change header links' text colour
+    elements = document.getElementsByClassName("head-link");
+    for ( i = 0; i < elements.length; i++ ) {
+        elements[i].style.color = "#87b09a";
+    }
+
+    //change article links' colour
+    elements = document.getElementsByClassName("art-link");
+    for ( i = 0; i < elements.length; i++ ) {
+        elements[i].style.color = "#5d7453";
+    }
+
+    //change footer text colour
+    elements = document.getElementsByClassName("footer-container");
+    for ( i = 0; i < elements.length; i++ ) {
+        elements[i].style.color = "#82a789";
+    }
+
+    //change border colour
+    elements = document.getElementsByTagName("tr");
+    for ( i = 0; i < elements.length; i++ ) {
+      elements[i].style.borderColor = "#6d8159";
+    }
+
+    //update variable
+    colour = "green";
+  }
+
+}
+    </script>
+  </body>
+</html>
