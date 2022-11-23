@@ -1,5 +1,6 @@
 html {
   background-color: #E4E9FD;
+  /* creates background gradient*/
   background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
   min-height: 1000px;
   font-family: 'helvetica neue';
@@ -34,11 +35,12 @@ h1 {
   border-bottom: 0;
 }
 
+/* Puts a line through selected item*/
 input:checked+p {
   text-decoration: line-through;
   text-decoration-color: #A683E3;
 }
-
+/* Use this style for the input elements with type checkbox */
 input[type="checkbox"] {
   margin: 20px;
 }
@@ -51,7 +53,7 @@ p {
   color: #00204a;
 }
 
-form {
+form.item {
   text-align: center;
   margin-left: 20px;
 }

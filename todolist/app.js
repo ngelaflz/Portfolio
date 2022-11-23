@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 //so tht we can connect the css style as normal
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://ngela:test@cluster0.79qme9u.mongodb.net/todolistDB");
+mongoose.connect("mongodb+srv://ngela:test@cluster0.79qme9u.mongodb.net/todolistDB?retryWrites=true&w=majority");
 
 //create blueprint for item object
 const itemsSchema = {
@@ -48,7 +48,6 @@ app.get("/", function(req, res){
 
   try {
     Item.find({},function(err, foundItems){
-      console.log(foundItems.length);
       //if the default items havent been added to the list add them
       if ( foundItems.length === 0 ) {
         Item.insertMany(defaultItems, function(err){
@@ -113,6 +112,11 @@ app.post("/work", function(req, res){
   res.redirect("/work");
 })
 
-app.listen(3000, function(){
+let port = process.env.PORT;
+if (port == null || port ==""){
+  port = 3000;
+}
+
+app.listen(port, function(){
   console.log("Server started on port 3000");
 });

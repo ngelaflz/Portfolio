@@ -1,21 +1,29 @@
+<!-- includes header part of html -->
 <%- include("header") -%>
 
-  <div class="box" id="heading">
-    <h1> <%= listTitle %> </h1>
-  </div>
+    <div class="box" id="heading">
+      <h1> <%= listTitle %> </h1>
+    </div>
 
-  <div class="box">
-    <% for (let i=0; i<newListItems.length; i++) { %>
-      <div class="item">
-        <input type="checkbox">
-        <p><%=  newListItems[i]  %></p>
-      </div>
-      <% } %>
+    <div class="box">
+      <!-- print eat item of the array in a li tag -->
+      <% newListItems.forEach(function(i){ %>
+        <form action ="/delete" method="post">
+          <div class="item">
+            <!-- When a checkbox is clicked, we submit form -->
+            <!-- Assign the id of the item to the checkbox -->
+            <input type="checkbox" name="checkbox" value="<%=i._id%>" onChange="this.form.submit()">
+            <p><%=i.name%></p>
+          </div>
+        </form>
+      <% }) %>
 
-      <form class="item" action="/" method="post">
-        <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
-        <button type="submit" name="list">+</button>
-      </form>
-  </div>
+    <form class="item" action="/" method="post">
+      <!--new item saves as js var with name newItem -->
+      <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+      <button type="submit" name="list" value=<%= listTitle%>>+</button>
+
+    </form>
+    </div>
 
 <%- include("footer") -%>
