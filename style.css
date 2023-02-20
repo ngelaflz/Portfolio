@@ -33,7 +33,7 @@ th {
 }
 
 body {
-  background-color: #FAE8EB;
+  background-color: white;
   color: #231942;
   margin: 0;
   padding: 0;
@@ -70,7 +70,7 @@ td {
 
 nav {
   height: 50px;
-  background-color: #afafaf;
+  background-color: #e7cadf;
   padding: 7px 300px 10px 7px;
   text-align: right;
   position: fixed;
@@ -79,7 +79,7 @@ nav {
 }
 
 nav a:hover {
-  color: #FAE8EB;
+  color: white;
 }
 
 nav ul {
@@ -182,8 +182,10 @@ footer a:hover {
 }
 
 .pink-container{
-  background-color: #e8dce5;
+  background-color: rgb(254, 246, 252);
   border-radius: 75px;
+  border-style: solid;
+  border-color: #e8dce5;;
   padding: 0 40px 40px 40px;
   width: 45%;
 }
@@ -276,6 +278,10 @@ footer a:hover {
   text-align: left;
   margin-top: 20px;
   margin-bottom: 5px;
+}
+
+.skill{
+  font-weight: bold;
 }
 
 #work-exp ul {
